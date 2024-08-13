@@ -1,0 +1,44 @@
+main {
+  width: 100%;
+  background-color: beige;
+  height: 2000px;
+
+  figure {
+    width: 100%;
+    background-color: ghostwhite;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .text-on-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 24px 48px;
+    color: white;
+    line-height: 1.5;
+
+    h1 {
+      margin: 10px 0;
+      font-size: 64px;
+      font-weight: 400;
+    }
+    h2 {
+      margin: 10px 0;
+      font-size: 36px;
+      font-weight: 200;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 15px 0;
+      font-size: 18px;
+      color: inherit;
+      background-color: black;
+    }
+  }
+}
