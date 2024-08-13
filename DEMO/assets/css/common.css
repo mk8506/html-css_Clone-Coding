@@ -1,0 +1,146 @@
+/**
+ * 모든 페이지에서 사용될 공통적인 내용을 정의하는 파일
+ *
+ */
+
+/*----------------------------------------------------------
+ * 변수 설정
+ *----------------------------------------------------------*/
+ :root {
+  /* 사이트의 기본 색상값들에 대한 변수 설정 */
+  --my-color-black: #000000;
+  --my-color-dark-gray: #444444;
+  --my-color-gray: #616161;
+  --my-color-gray-op: #61616177;
+  --my-color-light-gray: #eeeeee;
+  --my-color-white: #f1f1f1;
+  --my-color-black-op: #00000011;
+  --my-color-green: #0f0;
+}
+
+/*----------------------------------------------------------
+ * 모든 태그에 대한 기본 스타일 설정
+ *----------------------------------------------------------*/
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/*----------------------------------------------------------
+ * 링크에 대한 기본 설정
+ *----------------------------------------------------------*/
+a {
+  text-decoration: none;
+  color: var(--my-color-black)
+}
+
+/*----------------------------------------------------------
+ * 상단영역
+ *----------------------------------------------------------*/
+header {
+  background-color: var(--my-color-white);
+  /*header position*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  /*width: 100%;*/
+
+  .menu {
+    max-width: 1800px;
+    margin: auto;
+    display: flex;
+    
+    li {
+      display: inline-block;
+      text-align: center;
+
+      /*tablet*/
+      @media only screen and (max-width: 992px) {
+        width: 20%;
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    /*if you define the size of the block here, same as li, because no padding or margin on li*/
+    padding: 15px; 
+
+    &:hover {
+      background-color: var(--my-color-black-op);
+    }
+
+    span {
+      @media only screen and (max-width: 992px) {
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 5px;
+        /*remove search margin-left auto*/
+        margin-left: 0;
+        /*enter after icon*/
+        display: block;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------
+ * 하단영역
+ *----------------------------------------------------------*/
+footer {
+  /** 작업하는 동안의 임시 적용 스타일 **/
+  background-color: black;
+  /*center everything (to the top button, ul, cpy) in footer, vs text-align, align-items, justfiy-content*/
+  text-align: center;
+  /*padding on footer -> no need for margin between child elements*/
+  padding: 30px;
+
+  .to-the-top {
+    i {
+      margin-right: 5px;
+    }
+
+    display: inline-block;
+    padding: 10px 25px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--my-color-gray);
+    background-color: var(--my-color-light-gray);
+
+    &:hover {
+      background-color: var(--my-color-green);
+    }
+  }
+
+  ul {
+    display: flex;
+    /*center items*/
+    justify-content: center;
+    margin-bottom: 20px;
+
+    li {
+      margin: 5px 10px;
+      
+      i {
+        font-size: 24px;
+        color: var(--my-color-white);
+
+        &:hover {
+          color: var(--my-color-green);
+        }
+      }
+    }
+  }
+
+  address {
+    color: white;
+  }
+}
