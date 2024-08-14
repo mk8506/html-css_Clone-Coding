@@ -51,13 +51,11 @@ aside {
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 5px;
-    background-color: aliceblue;
   }
 
   /* main nav */
   .main-nav {
     margin-top: 100px;
-    background-color: aliceblue;
 
     ul {
 
@@ -118,7 +116,6 @@ header {
   height: 85px;
   padding: 0 16px;
   margin: auto;
-  background-color: aliceblue;
 
   
   p {
@@ -127,7 +124,6 @@ header {
     margin: 24px 0;
     font-size: 26px;
     font-weight: 50;
-    background-color:rgb(230, 242, 253);
     
     
     &:last-child {
@@ -147,7 +143,6 @@ header {
  *----------------------------------------------------------*/
 
 footer {
-  background-color: bisque;
 
   .subscribe {
     padding: 32px 16px;
@@ -267,6 +262,10 @@ footer {
 
         i {
           font-size: 18px;
+
+          &:hover {
+            color: #0008;
+          }
         }
       }
     }
