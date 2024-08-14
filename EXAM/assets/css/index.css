@@ -1,44 +1,124 @@
 main {
   width: 100%;
   background-color: beige;
-  height: 2000px;
 
-  figure {
+  /* main image */
+  .main-figure {
     width: 100%;
     background-color: ghostwhite;
     position: relative;
 
-    img {
+    .main-photo {
       width: 100%;
       height: auto;
+      vertical-align: middle;
+    }
+    
+    /* main text */
+    .text-on-photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+      padding: 24px 48px;
+      color: white;
+  
+      h1 {
+        margin: 10px 0;
+        font-size: 64px;
+        font-weight: 400;
+      }
+      h2 {
+        margin: 10px 0;
+        font-size: 36px;
+        font-weight: 200;
+      }
+      a {
+        display: inline-block;
+        padding: 12px 24px;
+        margin: 15px 0;
+        font-size: 18px;
+        color: inherit;
+        background-color: black;
+      }
     }
   }
 
-  .text-on-photo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 24px 48px;
-    color: white;
-    line-height: 1.5;
 
-    h1 {
-      margin: 10px 0;
-      font-size: 64px;
-      font-weight: 400;
+
+  .eight-items {
+    font-size: 15px;
+    color: grey;
+    margin: 15px 0;
+  }
+
+  .products {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+
+    li {
+      width: 25%;
+      padding: 0 16px;
+
+      figure {
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+          filter: saturate(30%);
+        }
+      }
+
+      .figure-new-sale {
+        position: relative;
+        width: 100%;
+
+        .new-sale {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 111;
+          padding: 0 8px;
+          font-size: 15px;
+          color: white;
+          background-color: black;
+        }
+
+        .buy-now {
+          visibility: hidden;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          padding: 8px 16px;
+          margin-left: -56.3px;
+          margin-top: -19.25px;
+          text-align: center;
+          font-size: 15px;
+          color: white;
+          background-color: black;
+        }
+
+        &:hover > .buy-now {
+            color: black;
+            background-color: rgb(218, 218, 218);
+        }
+      }
+
+      p {
+        margin: 15px 0;
+        font-size: 15px;
+        color: black;
+
+        .seventh {
+          color: #862821be;
+        }
+      }
     }
-    h2 {
-      margin: 10px 0;
-      font-size: 36px;
-      font-weight: 200;
-    }
-    a {
-      display: inline-block;
-      padding: 12px 24px;
-      margin: 15px 0;
-      font-size: 18px;
-      color: inherit;
-      background-color: black;
-    }
+  }
+
+  .space {
+    margin-left: 5px;
   }
 }

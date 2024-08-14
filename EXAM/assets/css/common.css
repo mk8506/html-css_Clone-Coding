@@ -1,7 +1,11 @@
 * {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   font-size: 12px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 400;
 }
 
 a {
@@ -23,8 +27,8 @@ body {
   flex: 1;
 }
 
-header, main {
-  padding: 0 20px;
+header, .main-figure, .eight-items {
+  padding: 0 16px;
 }
 
 /*----------------------------------------------------------
@@ -41,6 +45,7 @@ aside {
     text-shadow: 2px; /***/
   }
 
+  /* logo */
   h1 {
     margin-top: 30px;
     font-size: 24px;
@@ -49,6 +54,7 @@ aside {
     background-color: aliceblue;
   }
 
+  /* main nav */
   .main-nav {
     margin-top: 100px;
     background-color: aliceblue;
@@ -59,12 +65,12 @@ aside {
 
         a {
           display: block;
-          padding: 8% 16px;
+          padding: 8px 16px;
           font-size: 18px;
           font-weight: 600;
           color: rgb(94, 94, 94);
 
-          &:nth-child(3) { /***/
+          &:nth-child(3) { /*???*/
             color: black;
           }
           
@@ -77,8 +83,28 @@ aside {
     }
   }
 
+  /* sub nav */
   .sub-nav {
     margin-top: 100px;
+
+    ul {
+
+      li {
+
+        a {
+          display: block;
+          padding: 8px 12px;
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(44, 44, 44);
+          
+          &:hover {
+            color: black;
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -101,7 +127,6 @@ header {
     margin: 24px 0;
     font-size: 26px;
     font-weight: 50;
-    font-family: "Montserrat", sans-serif;
     background-color:rgb(230, 242, 253);
     
     
@@ -122,7 +147,130 @@ header {
  *----------------------------------------------------------*/
 
 footer {
-  background-color: grey;
+  background-color: bisque;
+
+  .subscribe {
+    padding: 32px 16px;
+    font-size: 15px;
+    background-color: black;
+
+    h1 {
+      margin: 10px 0;
+      font-size: 36px;
+      color: white;
+    }
+
+    h2 {
+      margin: 15px 0;
+      font-size: inherit;
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+    }
+
+    button {
+      padding: 8px 16px;
+      margin: 16px 0;
+      font-size: inherit;
+      color: white;
+      background-color: #f44336;
+    }
+  }
+
+  .information {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding: 64px 0;
+    text-align: center;
+    background-color: whitesmoke;
+
+    .hori {
+      width: 33.333%;
+      padding: 0 8px;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 300;
+        margin: 10px 0;
+      }
+
+      p {
+        padding: 12px 0;
+      }
+
+      form {
+        width: 100%;
+
+        input, textarea {
+          width: inherit;
+          padding: 8px;
+          margin: 6px 0;
+          color: grey;
+          border: 1px solid rgb(194, 194, 194);
+        }
+
+        textarea, button {
+          width: inherit;
+          height: 34px;
+        }
+
+        button {
+          padding: 8px 16px;
+          margin: 16px 0;
+          text-align: center;
+          font-size: inherit;
+          color: white;
+          background-color: black;
+        }
+      }
+      
+      .about {
+        text-align: center;
+
+        li {
+          margin: 12px 0;
+
+          a {
+            font-size: 12px;
+            color: rgb(39, 39, 39);
+            text-decoration: underline;
+          }
+        }
+      }
+
+    }
+
+    .vert {
+      text-align: left;
+
+      ul {
+
+        li {
+          margin: 12px 0;
+
+          a {
+            font-size: 12px;
+
+            i {
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+
+      .social-media {
+        margin-top: 30px;
+
+        i {
+          font-size: 18px;
+        }
+      }
+    }
+  }
   
   .copyright {
     display: flex;
@@ -131,5 +279,9 @@ footer {
     height: 80px;
     color: white;
     background-color: black;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
