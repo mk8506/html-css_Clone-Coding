@@ -15,7 +15,7 @@ a {
 body {
   max-width: 1200px;
   height: 100vh;
-  display: flex; /*it's not flex? div then padding then right, fixed*/
+  display: flex; 
   margin: auto;
 }
 
